@@ -4,7 +4,7 @@ this script is meant to be run on new linux servers of Excellgene SA, it will tr
 
 ## Usage
 
-    curl -s https://github.com/excellgene/ssh_deploykeys/
+    curl -s https://raw.githubusercontent.com/excellgene/ssh_deploykeys/main/deploy | sh
 
 
 ## Requirements
