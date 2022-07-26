@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# description: this script is meant to be run on new linux servers of 
+#              Excellgene SA, it will try to download the public key of users
+#              specified in `users` file from github and add it to the
+#              file authorized_keys
+
+AUTHORIZED_KEY_PATH="~/.ssh/authorized_keys"
+USERS=$(cat users)
+
+clear;
+
+for user in $USERS; do
+    echo "deploy key user: $user...";
+
+    KEY=$(curl -s "https://github.com/$user.keys")
+    echo $KEYS > $AUTHORIZED_KEY_PATH
+done
