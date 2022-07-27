@@ -14,5 +14,5 @@ for user in $USERS; do
     echo "deploy key user: $user...";
 
     KEY=$(curl -s -L "https://github.com/$user.keys")
-    echo $KEYS >> $AUTHORIZED_KEY_PATH;
+    echo $KEY >> $AUTHORIZED_KEY_PATH;
 done
