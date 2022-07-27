@@ -5,8 +5,8 @@
 #              specified in `users` file from github and add it to the
 #              file authorized_keys
 
-AUTHORIZED_KEY_PATH="~/.ssh/authorized_keys"
-USERS=$(cat users)
+AUTHORIZED_KEY_PATH="$HOME/.ssh/authorized_keys"
+USERS=$(curl -s -L "https://raw.githubusercontent.com/excellgene/ssh_deploykeys/main/users")
 
 clear;
 
